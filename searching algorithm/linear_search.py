@@ -1,4 +1,4 @@
-
+3
 # foor loop
 
 # def linear_search(l, x):
@@ -63,19 +63,40 @@
 
 # foor loop
 
-def binary_search(l, x):
-    left = 0
-    right = len(l)
-    for i in range(left, right):
-        mid = (left+right)//2
-        if l[mid] == x:
-            return mid
-        if l[mid] < x:
-            left = mid+1
-        else:
-            right = mid-1
+# def binary_search(l, x):
+#     left = 0
+#     right = len(l)
+#     for i in range(left, right):
+#         mid = (left+right)//2
+#         if l[mid] == x:
+#             return mid
+#         if l[mid] < x:
+#             left = mid+1
+#         else:
+#             right = mid-1
+#     return -1
+
+# print(binary_search([1, 2, 3, 4, 5, 6, 7, 8, 9, 10],9))
+
+
+
+
+
+def linear_search(l, x):
+    n = len(l)
+    for i in range(n):
+        if l[i] == x:
+            return i
     return -1
 
-print(binary_search([1, 2, 3, 4, 5, 6, 7, 8, 9, 10],9))
+print(linear_search([1, 2, 3, 4, 5], 4))
+
+
+def test_linear_search():
+    l = [1, 2, 3, 4, 5]
+    excepted_result = 3
+
+
+
 
 
